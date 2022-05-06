@@ -23,6 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # flask cache
-backend/__pycache__
+venv/__pycache__
 backend/test
 
