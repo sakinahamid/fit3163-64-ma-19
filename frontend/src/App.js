@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./App.css";
-import KnowledgeGraph from "./KnoledgeGraph/knowledge-graph.component";
+import KnowledgeGraph from "./KnowledgeGraph/knowledge-graph.component";
 
 function App() {
   return (

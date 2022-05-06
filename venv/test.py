@@ -1,5 +1,120 @@
 from flask import Flask
 app = Flask(__name__)
-@app.route('/')
+
+
+@app.route('/data')
 def hello_world():
-    return 'Hello world!'
+    return {
+        "nodes": [
+            {
+                "id": "COVID-19",
+                "name": "COVID-19",
+                "val": 10,
+                "group": 1
+            },
+            {
+                "id": "China",
+                "name": "China",
+                "val": 5,
+                "group": 1
+            },
+            {
+                "id": "Vaccine",
+                "name": "Vaccine",
+                "val": 4,
+                "group": 1
+            },
+            {
+                "id": "Omicron",
+                "name": "Omicron",
+                "val": 2,
+                "group": 1
+            },
+            {
+                "id": "Delta",
+                "name": "Delta",
+                "val": 3,
+                "group": 1
+            },
+            {
+                "id": "Masks",
+                "name": "Masks",
+                "val": 2,
+                "group": 1
+            },
+            {
+                "id": "Variant",
+                "name": "Variant",
+                "val": 4,
+                "group": 1
+            },
+            {
+                "id": "Death",
+                "name": "Death",
+                "val": 2,
+                "group": 1
+            },
+            {
+                "id": "Fever",
+                "name": "Fever",
+                "val": 0.5,
+                "group": 1
+            },
+            {
+                "id": "Sore Throat",
+                "name": "Sore Throat",
+                "val": 1,
+                "group": 1
+            }
+        ],
+        "links": [
+            {
+                "source": "COVID-19",
+                "target": "China",
+                "label": "originates"
+            },
+            {
+                "source": "COVID-19",
+                "target": "Death",
+                "label": "causes"
+            },
+            {
+                "source": "COVID-19",
+                "target": "Vaccine"
+            },
+            {
+                "source": "Death",
+                "target": "Fever"
+            },
+            {
+                "source": "Variant",
+                "target": "Delta",
+                "label": "is"
+            },
+            {
+                "source": "Variant",
+                "target": "Omicron",
+                "label": "is"
+            },
+            {
+                "source": "COVID-19",
+                "target": "Variant"
+            },
+            {
+                "source": "COVID-19",
+                "target": "Masks"
+            },
+            {
+                "source": "Variant",
+                "target": "Masks"
+            },
+            {
+                "source": "Death",
+                "target": "Sore Throat"
+            },
+            {
+                "source": "Sore Throat",
+                "target": "Masks"
+            }
+        ]
+    }

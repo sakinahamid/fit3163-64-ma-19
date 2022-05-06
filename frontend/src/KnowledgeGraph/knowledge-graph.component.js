@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ForceGraph2D } from "react-force-graph";
 
 import data from "../data.json";
@@ -6,7 +6,16 @@ import data_2 from "../data_2.json";
 import UpdateGraph from "./update-graph.component";
 
 function KnowledgeGraph() {
-  const [json, setJson] = useState(data);
+  const [test, setTest] = useState("");
+  const [json, setJson] = useState();
+
+  useEffect(() => {
+    fetch("/data").then((res) => {
+      res.json().then((d) => {
+        setJson(d);
+      });
+    });
+  }, []);
 
   const onUpdate = () => {
     setJson(({ nodes, links }) => {
@@ -24,6 +33,7 @@ function KnowledgeGraph() {
       <div className="upload-container">
         <UpdateGraph onUpdate={onUpdate} />
       </div>
+      <h1>{test}</h1>
       <ForceGraph2D
         graphData={json}
         nodeAutoColorBy={"val"}
