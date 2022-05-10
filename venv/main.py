@@ -1,5 +1,8 @@
+from calendar import c
 import os
 from flask import Flask, request, render_template, redirect, url_for
+import json
+import sys
 
 from werkzeug.utils import secure_filename
 
@@ -1584,3 +1587,11 @@ def react_link():
             {"source": "consent", "target": "waived", "label": "was"}
         ]
     }
+
+
+@app.route('/update')
+def update_react():
+    f = open('data2.json')
+    data = json.load(f)
+    print(type(data), file=sys.stderr)
+    return data

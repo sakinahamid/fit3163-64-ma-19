@@ -5,11 +5,12 @@ import data_2 from "../../data_2.json";
 import UpdateGraph from "./update-graph.component";
 import Popup from "../popup/Popup";
 
-function KnowledgeGraph() {
+function KnowledgeGraph(props) {
   const [json, setJson] = useState();
   const [btnPopup, setBtnPopup] = useState(false);
   const [node, setNode] = useState({});
   const [articles, setArticles] = useState([]);
+  const [jsonUpdate, setJsonUpdate] = useState();
 
   const mapArray = articles.map((article) => {
     return <li>{article}</li>;
@@ -23,20 +24,35 @@ function KnowledgeGraph() {
     });
   }, []);
 
+  useEffect(() => {
+    fetch("/update").then((res) => {
+      res.json().then((d) => {
+        setJsonUpdate(d);
+      });
+      if (jsonUpdate) {
+        onUpdate();
+      }
+    });
+  }, [props.updated]);
+
   const onUpdate = () => {
     setJson(({ nodes, links }) => {
-      console.log(data_2.nodes);
       return {
-        nodes: nodes.concat(data_2.nodes),
-        links: links.concat(data_2.links),
+        nodes: nodes.concat(jsonUpdate.nodes),
+        links: links.concat(jsonUpdate.links),
       };
     });
-    console.log(json);
   };
 
   const onClick = (node) => {
     setNode(node);
-    setArticles(node.articles);
+    if (node.articles) {
+      setArticles(node.articles);
+      console.log(props.updated);
+    } else {
+      setArticles([]);
+    }
+
     setBtnPopup(true);
   };
 
@@ -55,6 +71,7 @@ function KnowledgeGraph() {
         linkDirectionalParticleSpeed={0.005}
         linkDirectionalParticleWidth={1.5}
         linkDirectionalParticles={3}
+        d3Force={"link"}
         onNodeClick={(node) => {
           onClick(node);
         }}

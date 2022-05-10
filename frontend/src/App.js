@@ -7,6 +7,7 @@ import Popup from "./components/popup/Popup";
 
 function App() {
   const [file, setFile] = useState();
+  const [updated, setUpdated] = useState(false);
 
   function handleChange(event) {
     setFile(event.target.files[0]);
@@ -20,7 +21,10 @@ function App() {
 
     axios
       .post("/api/upload", formData)
-      .then((res) => console.log(res))
+      .then((res) => {
+        console.log(res);
+        setUpdated(true);
+      })
       .catch((err) => console.warn(err));
   }
 
@@ -32,7 +36,7 @@ function App() {
         <input type="file" onChange={handleChange}></input>
         <button type="submit">Submit</button>
       </form>
-      <KnowledgeGraph />
+      <KnowledgeGraph updated={updated} />
     </>
   );
 }
