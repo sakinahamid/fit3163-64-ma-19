@@ -26,3 +26,27 @@ yarn-error.log*
 venv/__pycache__
 backend/test
 
+venv/lib/python3.10/site-packages/__pycache__/threadpoolctl.cpython-310.pyc
+venv/lib/python3.10/site-packages/__pycache__/typing_extensions.cpython-310.pyc
+venv/lib/python3.10/site-packages/benchmarks/__pycache__/__init__.cpython-310.pyc
+venv/lib/python3.10/site-packages/benchmarks/__pycache__/benchmark_sbd_tools.cpython-310.pyc
+venv/lib/python3.10/site-packages/benchmarks/__pycache__/bigtext_speed_benchmark.cpython-310.pyc
+venv/lib/python3.10/site-packages/benchmarks/__pycache__/english_golden_rules.cpython-310.pyc
+venv/lib/python3.10/site-packages/benchmarks/__pycache__/genia_benchmark.cpython-310.pyc
+venv/lib/python3.10/site-packages/benchmarks/__pycache__/genia.cpython-310.pyc
+venv/lib/python3.10/site-packages/benchmarks/__pycache__/universal_dependency_sbd.cpython-310.pyc
+venv/lib/python3.10/site-packages/blis/__pycache__/__init__.cpython-310.pyc
+venv/lib/python3.10/site-packages/blis/__pycache__/about.cpython-310.pyc
+venv/lib/python3.10/site-packages/blis/__pycache__/benchmark.cpython-310.pyc
+venv/lib/python3.10/site-packages/blis/tests/__pycache__/__init__.cpython-310.pyc
+venv/lib/python3.10/site-packages/blis/tests/__pycache__/common.cpython-310.pyc
+venv/lib/python3.10/site-packages/blis/tests/__pycache__/test_dotv.cpython-310.pyc
+venv/lib/python3.10/site-packages/blis/tests/__pycache__/test_gemm.cpython-310.pyc
+venv/lib/python3.10/site-packages/catalogue/__pycache__/__init__.cpython-310.pyc
+venv/lib/python3.10/site-packages/catalogue/_importlib_metadata/__pycache__/__init__.cpython-310.pyc
+venv/lib/python3.10/site-packages/catalogue/_importlib_metadata/__pycache__/_compat.cpython-310.pyc
+venv/lib/python3.10/site-packages/catalogue/tests/__pycache__/__init__.cpython-310.pyc
+venv/lib/python3.10/site-packages/catalogue/tests/__pycache__/test_catalogue.cpython-310.pyc
+venv/lib/python3.10/site-packages/charset_normalizer/assets/__pycache__/__init__.cpython-310.pyc
+venv/lib/python3.10/site-packages/charset_normalizer/cli/__pycache__/__init__.cpython-310.pyc
+venv/lib/python3.10/site-packages/charset_normalizer/cli/__pycache__/normalizer.cpython-310.pyc

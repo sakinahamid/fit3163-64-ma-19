@@ -1,114 +1,97 @@
 {
   "nodes": [
     {
-      "id": "COVID-19",
-      "name": "COVID-19",
-      "val": 10,
-      "group": 1
+      "id": 1,
+      "name": "Andy",
+      "gender": "male"
     },
     {
-      "id": "China",
-      "name": "China",
-      "val": 5,
-      "group": 1
+      "id": 2,
+      "name": "Betty",
+      "gender": "female"
     },
     {
-      "id": "Vaccine",
-      "name": "Vaccine",
-      "val": 4,
-      "group": 1
+      "id": 3,
+      "name": "Cate",
+      "gender": "female"
     },
     {
-      "id": "Omicron",
-      "name": "Omicron",
-      "val": 2,
-      "group": 1
+      "id": 4,
+      "name": "Dave",
+      "gender": "male"
     },
     {
-      "id": "Delta",
-      "name": "Delta",
-      "val": 3,
-      "group": 1
+      "id": 5,
+      "name": "Ellen",
+      "gender": "female"
     },
     {
-      "id": "Masks",
-      "name": "Masks",
-      "val": 2,
-      "group": 1
+      "id": 6,
+      "name": "Fiona",
+      "gender": "female"
     },
     {
-      "id": "Variant",
-      "name": "Variant",
-      "val": 4,
-      "group": 1
+      "id": 7,
+      "name": "Garry",
+      "gender": "male"
     },
     {
-      "id": "Death",
-      "name": "Death",
-      "val": 2,
-      "group": 1
+      "id": 8,
+      "name": "Holly",
+      "gender": "female"
     },
     {
-      "id": "Fever",
-      "name": "Fever",
-      "val": 0.5,
-      "group": 1
+      "id": 9,
+      "name": "Iris",
+      "gender": "female"
     },
     {
-      "id": "Sore Throat",
-      "name": "Sore Throat",
-      "val": 1,
-      "group": 1
+      "id": 10,
+      "name": "Jane",
+      "gender": "female"
     }
   ],
   "links": [
     {
-      "source": "COVID-19",
-      "target": "China",
-      "label": "originates"
+      "source": 1,
+      "target": 2
     },
     {
-      "source": "COVID-19",
-      "target": "Death",
-      "label": "causes"
+      "source": 1,
+      "target": 5
     },
     {
-      "source": "COVID-19",
-      "target": "Vaccine"
+      "source": 1,
+      "target": 6
+    },
+
+    {
+      "source": 2,
+      "target": 3
     },
     {
-      "source": "Death",
-      "target": "Fever"
+      "source": 2,
+      "target": 7
     },
     {
-      "source": "Variant",
-      "target": "Delta",
-      "label": "is"
+      "source": 3,
+      "target": 4
     },
     {
-      "source": "Variant",
-      "target": "Omicron",
-      "label": "is"
+      "source": 8,
+      "target": 3
     },
     {
-      "source": "COVID-19",
-      "target": "Variant"
+      "source": 4,
+      "target": 5
     },
     {
-      "source": "COVID-19",
-      "target": "Masks"
+      "source": 4,
+      "target": 9
     },
     {
-      "source": "Variant",
-      "target": "Masks"
-    },
-    {
-      "source": "Death",
-      "target": "Sore Throat"
-    },
-    {
-      "source": "Sore Throat",
-      "target": "Masks"
+      "source": 5,
+      "target": 10
     }
   ]
 }
