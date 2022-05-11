@@ -29,9 +29,9 @@ function KnowledgeGraph(props) {
       res.json().then((d) => {
         setJsonUpdate(d);
       });
-      if (jsonUpdate) {
-        onUpdate();
-      }
+      // if (jsonUpdate) {
+      //   onUpdate();
+      // }
     });
   }, [props.updated]);
 
